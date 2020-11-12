@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Catalog</title>
+<link rel="stylesheet" type="text/css" href="catalog.style.css">
+</head>
+<img id="logocat" src="catalog.png">
+<h1 id="titlucat">Catalog ETTI</h1>
+<br>
+<body>
+<p>Grupa 2115:</p>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="thomas.jpg" style="width:20%">
+  <div class="text"><a href="file:///C:/Users/Giulio/Desktop/lab6/Profil%20(1).html">Bonthya Thomas</a></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="PIM_6501.jpg" style="width:20%">
+  <div class="text"><a href="file:///C:/Users/Giulio/Desktop/lab6/test.html">Goia Iulian Teodor</a></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="AER_4619.jpg" style="width:20%">
+  <div class="text"><a href="file:///C:/Users/Giulio/Desktop/lab6/Profilul%20meu.html">Lapadat Alexandra Ioana</a></div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); 
+}
+</script>
+
+</body>
+</html>

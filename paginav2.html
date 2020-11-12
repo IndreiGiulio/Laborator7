@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Prezentare</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script>
+function viitor()
+{
+document.getElementById("nume").innerHTML="Ing. Indrei Ovidiu Giulio";
+
+var tabelmaterii=document.getElementById("tabelmaterii");
+tabelmaterii.rows[0].cells[0].innerHTML="Etti";
+tabelmaterii.rows[0].cells[1].innerHTML="Activitati";
+tabelmaterii.rows[1].cells[0].innerHTML="Programare";
+tabelmaterii.rows[1].cells[1].innerHTML="Dezvoltare jocuri video";
+tabelmaterii.rows[2].cells[0].innerHTML="Electronica";
+tabelmaterii.rows[2].cells[1].innerHTML="Crearea de circuite";
+tabelmaterii.rows[3].cells[0].innerHTML="Robotica";
+tabelmaterii.rows[3].cells[1].innerHTML="Development";
+
+document.body.style.backgroundColor="#00cccc";
+
+document.getElementById("poza1").src="poza2.jpeg";
+document.getElementById("poza1").style.opacity="0.9";
+document.getElementById("poza1").style.border="6px";
+
+var para=document.getElementsByTagName("p");
+var i;
+for (i=0;i<para.length;i++)
+{
+para[i].style.color="#208000";
+}
+}
+function ani()
+{
+var azi =new Date;
+var varsta_mea;
+var datn=document.getElementById("varsta").innerHTML;
+var an_crt=azi.getFullYear();
+varsta_mea=an_crt-parseInt(datn);
+document.getElementById("varsta").innerHTML=varsta_mea;
+}
+</script>
+</head>
+<body>
+
+<h1 id="nume" class="w3-panel w3-leftbar  w3-aqua w3-xxlarge">Indrei Giulio</h1>
+<img id="poza1" class="w3-round w3-padding w3-border" src="gg.jpeg" alt="Trulli" width="400" height="333">
+<p><b><u>Informatii generale:</b></u>
+<br>
+<b>Contactare:</b> giulio.indrei@yahoo.com
+<br>
+<b>Profesie:</b> student
+<br>
+<b>Inaltime:</b> 1.81 m 
+<br>
+</p>
+<p onmouseover="ani()" id="varsta">2001</p>
+<button type="button" onclick='viitor()'>Alta viata</button>
+	<table id="tabelmaterii" class="w3-table-all">
+  <tr>
+<th class="w3-left-align">Discipline de interes</th>
+<th class="w3-right-align">Anul in care se studiaza</th>
+</tr>
+<tr>
+<td class="w3-left-align"><a href="https://etti.utcluj.ro/files/FiseDisciplina/TstRo/EL3103.pdf">Fizica</a></td>
+<td class="w3-right-align">I</td>
+</tr>
+<tr>
+<td class="w3-left-align"><a href="https://etti.utcluj.ro/files/FiseDisciplina/TstRo/EL3105.pdf">CCEP</a></td>
+<td class="w3-right-align">I</td>
+</tr>
+<tr>
+<td class="w3-left-align"><a href="https://etti.utcluj.ro/files/FiseDisciplina/TstRo/EL3106.pdf">Informatica aplicata</a></td>
+<td class="w3-right-align">I</td>
+</tr>
+</table>
+<p>
+<b><u>Hobby-uri:</b></u>
+<p>
+<ul class="w3-ul li w3-left-align w3-leftbar w3-lime">
+<li>Fotbal</li>
+<li>Pescuit</li>
+<li>Inot</li>
+<li>Electronica auto</li>
+</ul>
+
+</p>
+
+</body>
+</html>
